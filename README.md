@@ -23,7 +23,6 @@ machine learning models
 
 * best-model-1：屬性以數值表示
 * best-model-2：屬性以one hot表示
-
 * two_pokemon_combat：隨機抽樣兩隻寶可夢對戰
 
 ## CUDA & cuDNN Requirement
