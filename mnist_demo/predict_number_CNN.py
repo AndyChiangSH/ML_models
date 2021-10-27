@@ -61,6 +61,7 @@ if __name__ == '__main__':
         img = cv2.threshold(img, 120, 255, cv2.THRESH_BINARY_INV)[1]
         # 圖片黑白反轉
         # img = (255-img)/255
+
         # print(img)
         # plt.imshow(img, cmap="binary")
         # plt.show()
@@ -72,7 +73,7 @@ if __name__ == '__main__':
     test_label = np.array(test_label)
 
     test_feature_vector = test_feature.reshape(
-        len(test_feature), 784).astype("float32")
+        test_feature.shape[0], 28, 28, 1).astype("float32")
 
     # load model
     model = load_model("mnist_demo_model3.h5")
@@ -84,7 +85,7 @@ if __name__ == '__main__':
 
     show_images_labels(test_feature, test_label,
                        prediction, 0, len(test_feature))
-    print("predice done")
+    print("predice done!")
 
 
 """
